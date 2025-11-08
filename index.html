@@ -1,0 +1,214 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WanderIndia — Travel Itinerary Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">WanderIndia</div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#planner">Itinerary Planner</a>
+          <a href="#customer">Customer Care</a>
+          <a class="cta" id="openProfile">Sign in</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container hero-inner fade-up">
+      <h1>Uncover North India’s charm through unforgettable itineraries</h1>
+      <p>Create tailored travel plans for clients — choose a destination, set the number of days and add-on services. Designed for travel agents and personal planners.</p>
+      <div class="grid">
+        <div class="col-7">
+          <div class="panel">
+            <h3>QUICK START</h3>
+            <p class="muted">Pick a destination from our North India collection and build a day-by-day plan in seconds.</p>
+            <div class="btn-group">
+              <a href="#destinations" class="btn-primary">Explore Destinations</a>
+              <a href="#planner" class="btn-secondary">Plan an Itinerary</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="panel">
+            <h4>HIGHLIGHTS</h4>
+            <ul class="muted">
+              <li>🗺️ Personalized Itineraries – Create custom travel plans tailored to your interests, budget, and duration.</li>
+              <li>📍 Top Destinations – Explore detailed guides for India’s most stunning locations, from mountains to deserts.</li>
+              <li>🚨 24/7 Support & Assistance – Get real-time help during your journey.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="destinations" class="destinations">
+    <div class="container">
+      <h2>North India Destinations</h2>
+      <p class="muted">A curated selection of mountain and hill destinations from North India. Click a card to autofill the planner.</p>
+      <div class="dest-grid">
+        <div class="card" data-dest="Leh-Ladakh">
+          <img src="../ladakh.jpg" alt="Leh Ladakh">
+          <div class="meta"><h4>Leh - Ladakh</h4><p>High-altitude desert and dramatic passes — ideal for adventure and culture.</p></div>
+        </div>
+        <div class="card" data-dest="Manali">
+          <img src="../manali.jpg" alt="Manali">
+          <div class="meta"><h4>Manali</h4><p>Lush valleys, river rafting and nearby Solang Valley for snow sports.</p></div>
+        </div>
+        <div class="card" data-dest="Kashmir">
+          <img src="../kashmir.jpg" alt="Kashmir">
+          <div class="meta"><h4>Kashmir</h4><p>where nature paints its most beautiful masterpiece of mountains, lakes, and meadows.</p></div>
+        </div>
+        <div class="card" data-dest="Rishikesh">
+          <img src="../rishikesh.jpg" alt="Rishikesh">
+          <div class="meta"><h4>Rishikesh</h4><p>Yoga, riverside cafés and white-water rafting on the Ganges.</p></div>
+        </div>
+        <div class="card" data-dest="Sikkim">
+          <img src="../sikkim.jpg" alt="Sikkim">
+          <div class="meta"><h4>Sikkim</h4><p>A Himalayan jewel known for its pristine valleys, colorful culture, and warm hospitality.</p></div>
+        </div>
+        <div class="card" data-dest="Spiti">
+          <img src="../spiti.jpg" alt="Spiti">
+          <div class="meta"><h4>Spiti</h4><p>A remote mountain paradise where barren landscapes meet spiritual serenity.</p></div>
+        </div>
+        <div class="card" data-dest="Rajasthan">
+          <img src="../rajasthan.jpg" alt="Rajasthan">
+          <div class="meta"><h4>Rajasthan</h4><p>A royal land of deserts, palaces, and vibrant traditions.</p></div>
+        </div>
+         <div class="card" data-dest="Punjab">
+          <img src="../punjab.jpg" alt="Punjab">
+          <div class="meta"><h4>Punjab</h4><p>A colorful state known for its fertile fields, festivals, and heartfelt warmth</p></div>
+        </div>
+         <div class="card" data-dest="Meghalaya">
+          <img src="../meghalaya.jpg" alt="Meghalaya">
+          <div class="meta"><h4>Meghalaya</h4><p>A serene land of rain-soaked beauty, caves, and cascading streams.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="planner" class="planner">
+    <div class="container">
+      <h2>Itinerary Planner</h2>
+      <div class="grid planner-grid">
+        <div class="col-5">
+          <div class="panel">
+            <label for="destSelect">Choose Destination</label>
+            <select id="destSelect">
+              <option>Leh-Ladakh</option><option>Manali</option><option>Kashmir</option>
+              <option>Rishikesh</option><option>Sikkim</option><option>Spiti</option><option>Rajasthan</option><option>Punjab</option><option>Meghalaya</option>
+            </select>
+            <label>Number of days</label>
+            <input id="days" type="number" min="1" max="14" value="3">
+            
+             <div class="addons">
+  <h2>Add-ons</h2>
+  <div class="addon-option">
+    <input type="checkbox" value="Private cab">
+    <label>Private cab</label>
+  </div>
+  <div class="addon-option">
+    <input type="checkbox" value="Local guide">
+    <label>Local guide and sightseeing</label>
+  </div>
+  <div class="addon-option">
+    <input type="checkbox" value="Meals">
+    <label>3 Time Meals</label>
+  </div>
+  <div class="addon-option">
+    <input type="checkbox" value="Travel insurance">
+    <label>Travel Insurance</label>
+  </div>
+</div>
+
+             <div class="buttons">
+             <button id="generate">Generate Itinerary</button>
+             <button id="clear">Clear</button>
+             </div>
+
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="panel">
+            <h4>Itinerary Preview</h4>
+            <div id="itineraryOutput" class="itinerary muted">No itinerary generated yet.</div>
+            <div class="btn-group">
+              <button id="download" class="btn-primary">Download as JSON</button>
+              <button id="printIt">Print</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="customer" class="customer">
+    <div class="container">
+      <h2>Customer Care</h2>
+      <div class="grid">
+        <div class="col-7">
+          <div class="panel">
+            <h4>Contact Support</h4>
+            <p class="muted">For urgent help call +91 98765 43210 or fill the form below.</p>
+            <input id="cc-name" placeholder="Your name">
+            <textarea id="cc-message" rows="4" placeholder="Your message"></textarea>
+            <button id="sendMsg" class="btn-primary">Send</button>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="panel">
+            <h4>FAQs</h4>
+            <p><strong>Q:</strong> Can I modify the itinerary later?<br><strong>A:</strong> Yes — use the planner to regenerate and tweak.</p>
+            <p><strong>Q:</strong> Do you book hotels?<br><strong>A:</strong> We provide recommendations and booking support via agents.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">© WanderIndia — Minimal travel planner</div>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="box">
+      <div class="tabs">
+        <button id="tab-login">Login</button>
+        <button id="tab-signup">Sign up</button>
+      </div>
+      <div id="loginForm">
+        <label>Email</label>
+        <input id="loginEmail" placeholder="hello@client.com">
+        <label>Password</label>
+        <input id="loginPass" type="password" placeholder="••••••">
+        <button id="doLogin" class="btn-primary">Sign in</button>
+        <button id="closeModal">Close</button>
+      </div>
+      <div id="signupForm" style="display:none">
+        <label>Full name</label>
+        <input id="signupName" placeholder="Full name">
+        <label>Email</label>
+        <input id="signupEmail" placeholder="you@domain.com">
+        <label>Password</label>
+        <input id="signupPass" type="password">
+        <button id="doSignup" class="btn-primary">Create account</button>
+        <button id="closeModal2">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
